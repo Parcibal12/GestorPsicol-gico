@@ -2,10 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Cargando Sistema...</title>
-    <meta http-equiv="refresh" content="0; url=./blocks/dashboard/dashboard.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - Gestión psicológica</title>
+    
+    <link rel="stylesheet" href="./blocks/dashboard/dashboard.css">
+    <script src="../../assets/libs/tailwindcss.js"></script>
+    <script src="../../assets/libs/lucide.js"></script>
+    <script src="../../assets/libs/fullcalendar.js"></script>
 </head>
-<body>
-    <p>Redirigiendo a la agenda principal...</p>
+<body class="bg-gray-50 h-screen flex overflow-hidden">
+
+    <app-sidebar></app-sidebar>
+
+    <main class="flex-1 p-8 flex flex-col h-full overflow-hidden">
+        
+        <app-header></app-header>
+
+        <div id="app-content" class="flex-1 overflow-hidden relative">
+            </div>
+
+    </main>
+    
+    <script type="module" src="app.js"></script>
 </body>
 </html>

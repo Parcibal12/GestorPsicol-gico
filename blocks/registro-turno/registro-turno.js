@@ -1,3 +1,6 @@
+import { supabase } from '../../services/supabase.js';
+
+
 document.addEventListener('DOMContentLoaded', () => {    
     
     flatpickr("#input-fecha", {

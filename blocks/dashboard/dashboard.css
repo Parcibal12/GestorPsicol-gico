@@ -21,3 +21,9 @@ body {
     height: 100%;
     font-size: 0.875rem; 
 }
+
+.cita-estandar {
+    background-color: #0f172a !important;
+    border-color: #0f172a !important;
+    color: white !important;
+}
