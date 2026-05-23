@@ -1,0 +1,25 @@
+{
+  "name": "sistema-psicologo",
+  "version": "1.0.0",
+  "description": "Los psicólogos independientes sufren de desorganización al usar agendas físicas o herramientas no especializadas, lo que provoca pérdida de tiempo, cruce de horarios y mala gestión del historial clínico. Este sistema centraliza la agenda en una plataforma digital de un solo vistazo, optimizando el tiempo del profesional.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --collectCoverageFrom=\"blocks/**/*.js\" --collectCoverageFrom=\"utils/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parcibal12/GestorPsicol-gico.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Parcibal12/GestorPsicol-gico/issues"
+  },
+  "homepage": "https://github.com/Parcibal12/GestorPsicol-gico#readme",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}

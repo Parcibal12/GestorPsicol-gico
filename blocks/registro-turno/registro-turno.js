@@ -1,5 +1,5 @@
 import { supabase } from '../../services/supabase.js';
-
+import { validarCamposTurno } from '../../utils/validaciones.js';
 
 document.addEventListener('DOMContentLoaded', () => {    
     
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const horaInicio = document.getElementById('input-hora-inicio').value;
         const horaFin = document.getElementById('input-hora-fin').value;
 
-        if (pacienteId === '' || fecha === '' || horaInicio === '' || horaFin === '') {
+        if (!validarCamposTurno(pacienteId, fecha, horaInicio, horaFin)) {
             alert('Completa todos los campos obligatorios (*)');
             return;
         }
