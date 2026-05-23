@@ -85,11 +85,13 @@ async function guardarCitaRapida(nombre, startStr) {
             return; 
         }
 
+
         const fecha = startStr.split('T')[0];
-        const hora_inicio = startStr.split('T')[1].substring(0, 5); 
-        
+        const hora_inicio = startStr.split('T')[1].substring(0, 5);
+
+        const DURACION_CITA_HORAS = 1;
         const [horas, minutos] = hora_inicio.split(':');
-        const hora_fin = `${String(Number(horas) + 1).padStart(2, '0')}:${minutos}`;
+        const hora_fin = `${String(Number(horas) + DURACION_CITA_HORAS).padStart(2, '0')}:${minutos}`;
 
         const { error } = await supabase
             .from('citas')
