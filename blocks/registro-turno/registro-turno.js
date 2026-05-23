@@ -10,21 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
         allowInput: true
     });
 
-    flatpickr("#input-hora-inicio", {
-        enableTime: true,
-        noCalendar: true,
-        dateFormat: "H:i",
-        time_24hr: true,
-        allowInput: true
-    });
 
-    flatpickr("#input-hora-fin", {
+    const configuracionHora = {
         enableTime: true,
         noCalendar: true,
         dateFormat: "H:i",
         time_24hr: true,
         allowInput: true
-    });
+    };
+
+    flatpickr("#input-hora-inicio", configuracionHora);
+    flatpickr("#input-hora-fin", configuracionHora);
 
     
     const formularioCita = document.getElementById('formulario-cita');
