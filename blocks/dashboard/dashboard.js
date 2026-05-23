@@ -1,5 +1,8 @@
 import { supabase } from '../../services/supabase.js';
 
+const HORA_INICIO_JORNADA = '08:00:00';
+const HORA_FIN_JORNADA = '20:00:00';
+
 let calendar;
 
 export function inicializarCalendario() {
@@ -19,8 +22,8 @@ export function inicializarCalendario() {
             today: 'Hoy', month: 'Mes', week: 'Semana', day: 'Día'
         },
         allDaySlot: false,
-        slotMinTime: '08:00:00',
-        slotMaxTime: '20:00:00',
+        slotMinTime: HORA_INICIO_JORNADA,
+        slotMaxTime: HORA_FIN_JORNADA,
         height: '100%',
         nowIndicator: true,
         eventClassNames: 'cita-estandar', 
