@@ -20,4 +20,10 @@ describe('HU-06: Agendar una nueva sesión', () => {
         const resultado = validarCamposTurno('Juan Perez', '2026-10-10', '10:00', '11:00');
         expect(resultado).toBe(true);
     });
+
+    test('CA 4: Debería retornar falso si la hora de fin es anterior o igual a la hora de inicio', () => {
+        const resultado = validarCamposTurno('Juan Perez', '2026-10-10', '10:00', '09:00');        
+        expect(resultado).toBe(false);
+    });
+
 });
