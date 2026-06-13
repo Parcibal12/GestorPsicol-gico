@@ -16,3 +16,11 @@ export function esNotaEditable(fechaCreacion, fechaActual) {
     
     return diferenciaHoras <= LIMITE_HORAS_EDICION;
 }
+
+export function validarContenidoNota(contenido) {
+    if (contenido === "   " || contenido === "") {
+        return false;
+        
+    }
+    return true;
+}
