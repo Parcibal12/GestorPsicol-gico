@@ -18,9 +18,9 @@ export function esNotaEditable(fechaCreacion, fechaActual) {
 }
 
 export function validarContenidoNota(contenido) {
-    if (contenido === "   " || contenido === "") {
-        return false;
-        
-    }
-    return true;
+    if (!contenido) return false;
+    
+    const contenidoLimpio = contenido.trim();
+    return contenidoLimpio.length > 0;
+    
 }
