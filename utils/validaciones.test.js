@@ -1,4 +1,4 @@
-import { validarCamposTurno, esNotaEditable } from './validaciones.js';
+import { validarCamposTurno, esNotaEditable, validarContenidoNota } from './validaciones.js';
 
 describe('HU-06: Agendar una nueva sesión', () => {
     test('Debería retornar falso (invalido) si falta el nombre/ID del paciente', () => {
@@ -34,6 +34,16 @@ describe('HU-11: Editar nota de evolución', () => {
         const fechaActual = new Date('2026-06-12T10:00:00'); // 48 horas después
         
         const resultado = esNotaEditable(fechaCreacion, fechaActual);
+        
+        expect(resultado).toBe(false);
+    });
+});
+
+describe('HU-05: Registrar nota de evolución', () => {
+    test('CA 2: Debería retornar falso si el contenido de la nota está vacío o solo tiene espacios', () => {
+        const notaVacia = "   ";
+        
+        const resultado = validarContenidoNota(notaVacia);
         
         expect(resultado).toBe(false);
     });
