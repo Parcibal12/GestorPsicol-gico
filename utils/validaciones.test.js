@@ -27,3 +27,18 @@ describe('HU-06: Agendar una nueva sesión', () => {
     });
 
 });
+
+describe('HU-11: Editar nota de evolución', () => {
+    test('CA 2: Debería retornar falso si la nota tiene más de 24 horas de antigüedad', () => {
+
+        const { esNotaEditable } = require('./validaciones.js');
+        
+        const fechaCreacion = new Date('2026-06-10T10:00:00'); 
+        const fechaActual = new Date('2026-06-12T10:00:00');
+        
+        const resultado = esNotaEditable(fechaCreacion, fechaActual);
+        
+        expect(resultado).toBe(false);
+
+    });
+});
